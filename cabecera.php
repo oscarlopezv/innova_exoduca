@@ -12,7 +12,7 @@ where estado='RESERVADO' and fechaida between date(now()) and DATE_ADD(date(now(
 $resultado = $dbh->prepare($queryrpendientes);
 $resultado->execute();
 
-$numrpen  = count($resultado->fetch());
+$numrpen  = $resultado->fetch();
 
 
 $querycpendientes="select a.* from contrato_pagos a 

@@ -11,7 +11,7 @@ $query="select * from per_comision";
 $resultado = $dbh->prepare($query);
 $resultado->execute();
 
-$rowd = count($resultado->fetch());
+$rowd = $resultado->fetch();
 ?>
 <!DOCTYPE html>
 <html lang="es">
