@@ -12,7 +12,7 @@ $sql->mysqlsrv();
 $query="select * from convenios where idconvenios=".$_GET["id"]."";
 $resultado = $dbh->prepare($query);
 $resultado->execute();
-$rowd=$resultado->fetch();>fetch());
+$rowd=$resultado->fetch(); 
 }
 ?>
 <!DOCTYPE html>

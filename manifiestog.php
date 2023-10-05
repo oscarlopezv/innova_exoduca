@@ -15,7 +15,7 @@ if ($_GET["id"]){
     $query="select a.* from manifiesto a where a.idmanifiesto=".$_GET["id"]."";
     $resultado = $dbh->prepare($query);
     $resultado->execute();
-    $rowd=$resultado->fetch();>fetch());
+    $rowd=$resultado->fetch(); 
 }
 ?>
 <!DOCTYPE html>

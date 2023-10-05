@@ -16,7 +16,7 @@ if ($_GET["id"])
   $resultado->execute(); 	
     
 
-  $rowd=$resultado->fetch();>fetch());
+  $rowd=$resultado->fetch(); 
 }
 
 ?>

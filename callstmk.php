@@ -10,7 +10,7 @@ $sql->mysqlsrv();
 $query="select * from salas_diario where supervisor=".$_SESSION["usuario-id"]." and fecha=date(now())";
 $resultado = $dbh->prepare($query);
 $resultado->execute();
-$rowd=$resultado->fetch();>fetch());
+$rowd=$resultado->fetch(); 
 
 ?>
 <!DOCTYPE html>
