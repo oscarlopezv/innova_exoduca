@@ -12,7 +12,7 @@ $sql->mysqlsrv();
 $query="select * from htrabajo where idhtrabajo=".$_GET["id"]."";
 $resultado = $dbh->prepare($query);
 $resultado->execute(); 	
-$rowd=count($resultado->fetch());
+$rowd=$resultado->fetch();
 }
 ?>
 <!DOCTYPE html>
