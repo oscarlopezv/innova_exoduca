@@ -13,7 +13,7 @@ $sql->mysqlsrv();
 $query="select * from vehiculos_mant where idvehiculos_mant=".$_GET["id"]."";
 $resultado = $dbh->prepare($query);
 $resultado->execute(); 	
-$rowd=count($resultado->fetch());
+$rowd=$resultado->fetch();>fetch());
 }
 ?>
 <!DOCTYPE html>

@@ -16,7 +16,7 @@ if ($_GET["id"])
   $resultado->execute(); 	
     
 
-  $rowd=count($resultado->fetch());
+  $rowd=$resultado->fetch();>fetch());
 }
 
 ?>
