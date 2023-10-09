@@ -10,13 +10,13 @@ extract($_POST);
 
 
 
- $models = (array) json_decode($models);
+//  $models = (array) json_decode($models);
 // if (isset($models))  
 // 	extract($models); 
 
 print_r($_POST);
 print_r($models);
-die;
+
 
 switch ($id) {
 	case "empleado":
@@ -79,7 +79,8 @@ switch ($id) {
     
 }
 
-
+echo $query;
+die;
 $resultado = $dbh->prepare($query);
 $resultado->execute();
 if ($id=="cpendientes"){
