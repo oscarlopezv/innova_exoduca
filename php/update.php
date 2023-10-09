@@ -77,9 +77,6 @@ switch ($id) {
     
 }
 
-echo $query;
-die;
-
 $resultado = $dbh->prepare($query);
 $resultado->execute();
 if ($id=="cpendientes"){
