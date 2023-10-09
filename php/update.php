@@ -9,13 +9,6 @@ extract($_GET);
 extract($_POST);
 
 
-
-//  $models = (array) json_decode($models);
-// if (isset($models))  
-// 	extract($models); 
-
-var_dump($_POST);
-
 if($abono == "")
 {
 	$abono = 0;
@@ -82,8 +75,6 @@ switch ($id) {
     
 }
 
-echo $query;
-die;
 $resultado = $dbh->prepare($query);
 $resultado->execute();
 if ($id=="cpendientes"){
