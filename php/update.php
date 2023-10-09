@@ -14,7 +14,7 @@ extract($_POST);
 // if (isset($models))  
 // 	extract($models); 
 
-print_r($_POST)
+print_r($_POST);
 print_r($models);
 die;
 
