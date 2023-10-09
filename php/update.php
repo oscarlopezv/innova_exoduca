@@ -16,6 +16,8 @@ extract($_POST);
 
 
 print_r($models);
+die;
+
 switch ($id) {
 	case "empleado":
 		$query="Update empleados set nombres='$nom',apellidos='$ape',foto='$foto',mail='$mail',tipoempleado='$puesto',sueldo='$sueldo',puestoid='$idpe',codtmk='$codtmk',tipopago='$tpago',fingreso='$fingreso',usuario_actualiza='".$_SESSION["usuario-id"]."',fecha_actualiza=now() where idempleados=$idp";
