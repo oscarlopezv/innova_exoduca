@@ -8,7 +8,14 @@ $costonosocio=0;
 extract($_GET);
 extract($_POST);
 
-if (isset($models)) { extract($models); }
+
+
+ $models = (array) json_decode($models);
+if (isset($models))  
+	extract($models); 
+
+
+
 switch ($id) {
 	case "empleado":
 		$query="Update empleados set nombres='$nom',apellidos='$ape',foto='$foto',mail='$mail',tipoempleado='$puesto',sueldo='$sueldo',puestoid='$idpe',codtmk='$codtmk',tipopago='$tpago',fingreso='$fingreso',usuario_actualiza='".$_SESSION["usuario-id"]."',fecha_actualiza=now() where idempleados=$idp";
