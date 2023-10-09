@@ -16,7 +16,10 @@ extract($_POST);
 
 var_dump($_POST);
 
-
+if($abono == "")
+{
+	$abono = 0;
+}
 
 switch ($id) {
 	case "empleado":
