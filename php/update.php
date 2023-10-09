@@ -10,9 +10,9 @@ extract($_POST);
 
 
 
- $models = (array) json_decode($models);
-if (isset($models))  
-	extract($models); 
+//  $models = (array) json_decode($models);
+// if (isset($models))  
+// 	extract($models); 
 
 
 
