@@ -5,7 +5,8 @@ $sql=new conectar();
 $sql->mysqlsrv();
 extract($_GET);
 extract($_POST);
-$mail=trim($mail);
+
+$mail=@trim($mail);
 array_map('utf8_encode', $_POST);
 array_map('utf8_encode', $_GET);
 switch ($id) { 
@@ -17,6 +18,7 @@ switch ($id) {
         values ('$pcomisionar','$ofi','$cod','$fecha','$nomt1','$apet1','$cedt1','$mailt1','$telt1','$nomt2','$apet2','$cedt2','$mailt2','$telt2','$dir','$inversion','$inicial','$nombref','$cedf','$dirf','$telf','$obs',now(),'".$_SESSION["usuario-id"]."','$asesor1','$cerrador1','$cerrador2','$gmarketing','$tmk','$stmk','$gerven','$supven','$dircom','$jefe','$admven',$vig,'$gadm')";		
 	break; 
     case "forma_pago":
+		$fecha = date("Y-m-d");
 		$query="call cuotas($cuota,$gracia,'$descripcion',$saldo,$contrato,$dia,'".$_SESSION["usuario-id"]."','$fecha')";		
 	break;
     case "llamadas":
@@ -89,9 +91,10 @@ and provincia='$prov' limit $numcall) a))";
 	break;
 }
 
-
 $resultado = $dbh->prepare($query);
-$resultado->execute();
+if ($resultado->execute())
+	echo 1;
 
-echo $resultado->lastInsertId();
+
+// echo $resultado->lastInsertId();
 ?>
