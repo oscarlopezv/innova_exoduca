@@ -5,7 +5,7 @@ $sql=new conectar();
 $sql->mysqlsrv();
 extract($_GET);
 extract($_POST);
-
+print_r($_SESSION);
 $mail=@trim($mail);
 array_map('utf8_encode', $_POST);
 array_map('utf8_encode', $_GET);
