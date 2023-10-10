@@ -91,6 +91,8 @@ and provincia='$prov' limit $numcall) a))";
 	break;
 }
 
+echo $query;
+die;
 $resultado = $dbh->prepare($query);
 if ($resultado->execute())
 	echo 1;
