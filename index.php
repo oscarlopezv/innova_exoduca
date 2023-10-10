@@ -3,8 +3,6 @@ session_start();
 if (!isset($_SESSION["usuario"])) {
     echo '<script> document.location.href="login.php" </script>' ;
 } 
-print_r($_SESSION);
-die;
 include_once("php/conexion.php");
 $sql=new conectar();
 $sql->mysqlsrv();
