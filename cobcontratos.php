@@ -4,7 +4,6 @@ if (!isset($_SESSION["usuario"])) {
     echo '<script> document.location.href="login.php" </script>' ;
 }
 
-print_r($_SESSION);
 include_once("php/conexion.php");
 include_once("php/validarpermisos.php");
 $sql=new conectar();

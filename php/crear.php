@@ -5,7 +5,7 @@ $sql=new conectar();
 $sql->mysqlsrv();
 extract($_GET);
 extract($_POST);
-print_r($_SESSION);
+
 $mail=@trim($mail);
 array_map('utf8_encode', $_POST);
 array_map('utf8_encode', $_GET);
@@ -91,12 +91,10 @@ and provincia='$prov' limit $numcall) a))";
 	break;
 }
 
-echo $query;
-die;
+
 $resultado = $dbh->prepare($query);
 if ($resultado->execute())
 	echo 1;
-
 
 // echo $resultado->lastInsertId();
 ?>
