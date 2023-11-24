@@ -36,7 +36,7 @@ if (isset($_SESSION["usuario"])) {
         <div class="animate form login_form">
             
           <section class="login_content">
-              <h1><img src="images/flaec.png" style='max-width:50px; margin:15px'/>NEXT TOUR - EC</h1>
+              <h1><img src="images/flaec.png" style='max-width:50px; margin:15px'/>NEXT TOURsss - EC</h1>
             <form action="php/login-out.php" method="post">
                 
               <h1>Login Form</h1>
